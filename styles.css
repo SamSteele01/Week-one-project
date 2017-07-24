@@ -20,38 +20,58 @@ font-family: 'Merriweather', serif;
 font-family: 'Roboto', sans-serif;
 */
 
+/*affect all pages*/
 body {
-  background-color:
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  /*background-color: */
+
 }
 
 .whole-page {
-  height: 50px;
   font-family: 'Roboto', sans-serif;
-  background-color: #F2F1E8;
-  /*width: 1300px;*/
+  /*background-color: #F2F1E8;*/
+  width: 1280px;
   /*height: 1200px;*/
+  /*max-width: 1280;*/
+}
+
+#about-body {
+  background-image: url("./images/background-3.jpg");
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /*nav-bar */
 
-#site-header {
-  /*border: 2px solid blue;*/
-  height: 50px;
-  font-family: 'Roboto', sans-serif;
+header {
+  margin: 0;
+  /*font-family: 'Roboto', sans-serif;*/
   color: #2B2F26;
   font-weight: 400;
   background-color: #FFFFFF;
   box-shadow: 0px 0px 4px rgba( 0, 0, 0, 0.3 );
+  width: inherit;
+  position:fixed;
+  z-index:10;
+  /*background:inherit;*/
 }
 
 header ul{
   /*border: 2px solid red;*/
+  height: inherit;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  text-decoration: none;
+  /*text-decoration: none;*/
   text-transform: uppercase;
   justify-content: center;
+  align-items: center;
+
 }
 
 header img {
@@ -60,37 +80,72 @@ header img {
   position: absolute;
   height: 50px;
   justify-content: flex-start;
-  padding: 10;
+  align-items: center;
+  margin: 15px;
 }
 header li {
-  width: 40px;
+  width: 50px;
   font-family: 'Roboto', sans-serif;
   /*color: #2B2F26;*/
   display: block;
   /*justify-content: center;*/
-  flex-basis: 15%;
-  align-items: center;
+  flex-basis: 10%;
+  align-content: center;
   padding: 15px;
-  text-decoration: none;
+  /*text-decoration: none;*/
 }
 
 header a {
   /*text-decoration: underline;*/
   color: #2B2F26;
+  font-size: 20px;
 }
 
-/*end nav-bar*/
+header a:active {
+  color: #968772;
+}
 
+header a:hover {
+  color: #CD5D67;
+}
+
+a, a:hover {
+  -webkit-transition: color .4s linear;
+  -moz-transition: color .4s linear;
+  -o-transition: color .4s linear;
+  -ms-transition: color .4s linear;
+  transition: color .4s linear;
+}
+
+
+
+/*end nav-bar*/
+/*end affect all pages*/
+
+/*main content*/
 
 #site-main {
   font-family: 'Merriweather', serif;
-  /*font-weight: 100;*/
+  background-color: #F2F1E8;
   display: flex;
   flex-direction: column;
   /*justify-content: center;*/
   align-items: center;
   /*margin: 0;*/
   /*padding: 0;*/
+  width:100%;
+  padding-top:92px;
+  z-index:5;
+  overflow:auto;
+}
+
+#about-main {
+  font-family: 'Merriweather', serif;
+  background-color: #F2F1E8;
+  width:100%;
+  padding-top:92px;
+  z-index:5;
+  overflow:auto;
 }
 
 #site-main h1 {
@@ -98,56 +153,94 @@ header a {
   font-size: 75px;
   font-weight: 400;
   text-align: center;
+  /*text-overflow: clip;*/
   margin: 40px 0 10px;
+  padding: 0;
+}
+
+#about-main h1 {
+  font-size: 75px;
+  font-weight: 400;
+  text-align: center;
+  margin: 40px;
   padding: 0;
 }
 
 #site-main h2  {
   /*border: 2px solid red;*/
-  font-size: 38px;
+  font-size: 40px;
   font-weight: 100;
   text-align: center;
   margin: 10px 0 40px;
   padding: 0;
 }
 
-#row1 {
+#home-body #row1 {
   /*border: 2px solid green;*/
   display: flex;
   /*flex-wrap: wrap;*/
   /*align-content: space-around;*/
   justify-content: center;
   flex-direction: row;
-  width: 1200px;
-  height: 400px;
+  width: 100%;
+  /*height: 400px;*/
   /*max-width: 100%;*/
-  /*padding: 0;*/
-  margin: 0;
+  padding: 0px;
+  margin: 0 10px;
   /*display: block;*/
+  flex-wrap: wrap;
 }
 
-#row2 {
+#home-body #row2 {
   /*border: 2px solid green;*/
   display: flex;
   flex-wrap: nowrap;
   /*align-content: space-around;*/
   justify-content: flex-start;
   flex-direction: row;
-  width: 1200px;
-  height: 300px;
+  width: 100%;
+  /*height: 300px;*/
+  padding: 0px;
   margin: 0;
 }
 
 .pictures li {
-  max-width: 100%;
+
+  max-width: 60%;
+  min-width: 200px;
   padding: 0;
   margin: 10px;
   display: block;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  /*overflow: hidden;*/
+  display: flex;
+  flex-flow: row wrap;
+    /*trying to wrap pics after shrinking to min-width: */
+  /*justify-content: flex-end;*/
+  /*flex-direction: column;*/
+  align-items: flex-end;
+}
+
+/*"neither of these target properly"*/
+
+#row1 li {
+  height: 400px;
+}
+
+ #row2 li {
+  height: 300px;
+}
 
 
+.pictures a {
+  color: #F2F1E8;
+  padding: 10px 14px 4px;
+  margin: 0 0 18px;
+  background-color: #2B2F26;
+  text-align: justify;
+  height: 30px;
 }
 
 #pic1 {
@@ -183,4 +276,47 @@ header a {
 #pic7 {
   flex-grow: 1;
   background-image: url("./images/product-7.jpg")
+}
+
+#site-footer {
+  color: #F2F1E8;
+  height: 80px;
+  background-color: #2B2F26;
+  vertical-align: middle;
+  padding: 40px 0;
+}
+
+span {
+  margin: 30px;
+  padding: 50px;
+  font-size: 20px;
+  font-family: 'Merriweather', serif;
+
+}
+
+#shelf-space {
+  background-image: url("./images/background-1.jpg");
+}
+
+#birdhouse {
+  height: 200px;
+  width: 200px;
+  float: left;
+}
+
+blockquote {
+  border-left: 2px solid tan;
+  height: auto;
+
+}
+
+p {
+  font-size: 25px;
+
+}
+
+#window {
+  height: 200px;
+  width: inherit;
+  background-color: transparent;
 }
