@@ -123,6 +123,7 @@ header li.selected a {
 }
 
 a, a:hover {
+  color: #CD5D67;
   -webkit-transition: color .4s linear;
   -moz-transition: color .4s linear;
   -o-transition: color .4s linear;
@@ -135,18 +136,6 @@ a, a:hover {
 
 /*index.html start-----------*/
 /*main content----------*/
-
-a:active {
-  color: #968772;
-}
-
-a:hover {
-  color: #CD5D67;
-}
-
-/*end nav-bar*/
-
-
 
 #site-main {
   font-family: 'Merriweather', serif;
@@ -353,14 +342,19 @@ span {
 
 .below-window {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   /*justify-content: flex-end;*/
   /*align-items: flex-start;*/
 
 }
 
-col {
-  align-self: flex-end;
+#facilities {
+  justify-content:  flex-start;
+}
+
+.below-window #col {
+  width: 200px;
+  justify-content: flex-end;
   /*float: right;*/
   /*trying to make picture and caption appear in a column on the right*/
 }
@@ -374,6 +368,10 @@ col {
   background-repeat: no-repeat;
 }
 
+.below-window col #caption {
+  width: 200px;
+}
+
 #birdhouse {
   height: 150px;
   width: 200px;
@@ -384,7 +382,8 @@ col {
 blockquote {
   border-left: 2px solid tan;
   height: auto;
-
+  font-size: 20px;
+  font-style: italic;
 }
 
 p {
@@ -397,7 +396,7 @@ p {
     background-image: url("./images/background-3.jpg");
 
     /* Full height */
-    height: 200px;
+    height: 300px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -409,9 +408,35 @@ p {
   /*background-color: transparent; what I thought for parallaxing*/
 }
 
-table, tr, td {
+#about-main h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+
+table {
+  width: auto;
+  height: auto;
+}
+table, th, tr, td {
   border: 1px solid #046c97;
   border-collapse: collapse;
   padding: 10px;
+  font-size: 20px;
 }
+
+/*Start Newsletter------ */
+
+body #newsletter-main {
+  /*background-color: #F2F1E8;*/
+  display: block;
+  width: inherit;
+  height: 500px;
+  /*width:1280px;*/
+  padding-top:92px;
+  background-image: url("./images/background-2.jpg");
+  /*background-attachment: fixed;*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
