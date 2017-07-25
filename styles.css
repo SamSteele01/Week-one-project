@@ -20,23 +20,27 @@ font-family: 'Merriweather', serif;
 font-family: 'Roboto', sans-serif;
 */
 
-/*affect all pages*/
+/*affect all pages - start -------*/
 body {
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   /*background-color: */
-
 }
+/*body, html {
+    height: 100%;*/
+/*Part of parallaxing-- May fix footer issue*/
 
-.whole-page {
+
+.whole-page  {
   font-family: 'Roboto', sans-serif;
   /*background-color: #F2F1E8;*/
   width: 1280px;
   /*height: 1200px;*/
   /*max-width: 1280;*/
 }
+
 
 /*Thought I needed this for parallaxing*/
 /*#about-body {
@@ -47,7 +51,7 @@ body {
   background-repeat: no-repeat;
 }*/
 
-/*nav-bar */
+/*nav-bar start-----------*/
 
 /*Header*/
 #site-header {
@@ -58,7 +62,7 @@ body {
   font-weight: 400;
   background-color: #FFFFFF;
   box-shadow: 0 0 4px 0 rgba( 0, 0, 0, 0.3 );
-  width: inherit;
+  width: 1280px;
   position:fixed; /*for z-index*/
   z-index:10;
   /*background:inherit;*/
@@ -67,7 +71,7 @@ body {
 /*Logo is in header, not header ul.*/
 
 header ul{
-  /*border: 2px solid red;*/
+  /*border: 2px solid red;*/ /*Pesticide dev tool*/
   padding: 0px;
   margin: 0px;
   height: inherit;
@@ -83,7 +87,7 @@ header ul{
 }
 
 header img {
-  /*border: 2px solid red;*/
+  /*border: 2px solid red;*/ /*Pesticide dev tool*/
   /*width: 100%;*/
   position: absolute;
   height: 45px;   /*scales down the image*/
@@ -126,12 +130,11 @@ a, a:hover {
   transition: color .4s linear;
 }
 
+/*end nav-bar-----------*/
+/*end affect all pages-------*/
 
-
-/*end nav-bar*/
-/*end affect all pages*/
-
-/*main content*/
+/*index.html start-----------*/
+/*main content----------*/
 
 
 #site-main {
@@ -143,23 +146,16 @@ a, a:hover {
   /*align-items: center;*/
   /*margin: 0;*/
   /*padding: 0;*/
-  width:100%;
+  width:1280px;
   padding-top:92px;
   z-index:5;
   overflow:auto;
 }
 
-#about-main {
-  font-family: 'Merriweather', serif;
-  background-color: #F2F1E8;
-  width:100%;
-  padding-top:92px;
-  z-index:5;
-  overflow:auto;
-}
+
 
 #site-main h1 {
-  /*border: 2px solid red;*/
+  /*border: 2px solid red;*/ /*Pesticide dev tool*/
   font-size: 70px;
   font-weight: 400;
   text-align: center;
@@ -168,16 +164,10 @@ a, a:hover {
   padding: 0;
 }
 
-#about-main h1 {
-  font-size: 70px;
-  font-weight: 400;
-  text-align: center;
-  margin: 40px;
-  padding: 0;
-}
+
 
 #site-main h2  {
-  /*border: 2px solid red;*/
+  /*border: 2px solid red;*/ /*Pesticide dev tool*/
   font-size: 40px;
   font-weight: 100;
   text-align: center;
@@ -186,7 +176,7 @@ a, a:hover {
 }
 
 #home-body #row1 {
-  /*border: 2px solid green;*/
+  /*border: 2px solid green;*/ /*Pesticide dev tool*/
   display: flex;
   /*flex-wrap: wrap;*/
   /*align-content: space-around;*/
@@ -202,7 +192,7 @@ a, a:hover {
 }
 
 #home-body #row2 {
-  /*border: 2px solid green;*/
+  /*border: 2px solid green;*/ /*Pesticide dev tool*/
   display: flex;
   flex-wrap: nowrap;
   /*align-content: space-around;*/
@@ -215,8 +205,6 @@ a, a:hover {
 }
 
 .pictures li {
-
-  /*max-width: 60%;*/
   min-width: 200px;
   padding: 0;
   margin: 10px;
@@ -224,13 +212,14 @@ a, a:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /*overflow: hidden;*/
   display: flex;
   flex-flow: row wrap;
+  align-items: flex-end;
+  /*max-width: 60%;*/
+  /*overflow: hidden;*/
   /*trying to wrap pics after shrinking to min-width: */
   /*justify-content: flex-end;*/
   /*flex-direction: column;*/
-  align-items: flex-end;
 }
 
 /*"neither of these target properly"*/
@@ -266,6 +255,7 @@ a, a:hover {
     margin: -75px 0 0 -100px;
 }
 
+/*replace with flex: grow, shrink, basis*/
 #pic1 {
   flex-grow: 5;
   background-image: url("./images/product-1.jpg")
@@ -301,12 +291,24 @@ a, a:hover {
   background-image: url("./images/product-7.jpg")
 }
 
+/*End main content-------*/
+/*End index.html--------------*/
+
+/*Common to all pages----*/
+
+/*Site footer appears to the right of the header/body of about.html instead of underneath.*/
 #site-footer {
   color: #F2F1E8;
-  height: 80px;
+  width: inherit;
+  height: 40px;
   background-color: #2B2F26;
-  vertical-align: middle;
   padding: 40px 0;
+  /*vertical-align: middle;*/
+  /*z-index:5;  These don't get used */
+  /*overflow:auto;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 span {
@@ -314,12 +316,41 @@ span {
   padding: 50px;
   font-size: 20px;
   font-family: 'Merriweather', serif;
+}
+/*Common end-------------*/
+
+/*Start of about.html----------*/
+/*Start about-main---*/
+
+#about-main {
+  font-family: 'Merriweather', serif;
+  background-color: #F2F1E8;
+  width: 1280px;
+   /*Switching this to px makes the footer move to the right*/
+  padding-top:92px;
+  z-index:5;
+  overflow:auto;
+}
+
+#about-main h1 {
+  font-size: 70px;
+  font-weight: 400;
+  text-align: center;
+  margin: 40px;
+  padding: 0;
+}
+
+.below-window {
+  display: flex;
+  flex-direction: column;
+  /*justify-content: flex-end;*/
+  /*align-items: flex-start;*/
 
 }
 
 col {
-
-  float: right;
+  align-self: flex-end;
+  /*float: right;*/
   /*trying to make picture and caption appear in a column on the right*/
 }
 
@@ -336,6 +367,7 @@ col {
   height: 150px;
   width: 200px;
   float: left;
+  margin: 0 20px 20px 0;
 }
 
 blockquote {
@@ -350,9 +382,20 @@ p {
 }
 
 #window {
-  height: 200px;
+    /* The image used */
+    background-image: url("./images/background-3.jpg");
+
+    /* Full height */
+    height: 200px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  /*height: 200px;*/
   width: inherit;
-  background-color: transparent;
+  /*background-color: transparent; what I thought for parallaxing*/
 }
 
 table, tr, td {
