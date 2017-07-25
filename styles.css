@@ -114,12 +114,12 @@ header a {
   font-size: 20px;
 }
 
-header a:active {
+header li.selected a {
   color: #968772;
 }
 
-header a:hover {
-  color: #CD5D67;
+/*header a:hover {*/
+  /*color: #CD5D67;*/
 }
 
 a, a:hover {
@@ -135,6 +135,17 @@ a, a:hover {
 
 /*index.html start-----------*/
 /*main content----------*/
+
+a:active {
+  color: #968772;
+}
+
+a:hover {
+  color: #CD5D67;
+}
+
+/*end nav-bar*/
+
 
 
 #site-main {
