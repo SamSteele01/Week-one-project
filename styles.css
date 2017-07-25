@@ -38,32 +38,40 @@ body {
   /*max-width: 1280;*/
 }
 
-#about-body {
+/*Thought I needed this for parallaxing*/
+/*#about-body {
   background-image: url("./images/background-3.jpg");
   z-index: 1;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
+}*/
 
 /*nav-bar */
 
-header {
+/*Header*/
+#site-header {
   margin: 0;
+  height: 75px;
   /*font-family: 'Roboto', sans-serif;*/
   color: #2B2F26;
   font-weight: 400;
   background-color: #FFFFFF;
-  box-shadow: 0px 0px 4px rgba( 0, 0, 0, 0.3 );
+  box-shadow: 0 0 4px 0 rgba( 0, 0, 0, 0.3 );
   width: inherit;
-  position:fixed;
+  position:fixed; /*for z-index*/
   z-index:10;
   /*background:inherit;*/
 }
 
+/*Logo is in header, not header ul.*/
+
 header ul{
   /*border: 2px solid red;*/
+  padding: 0px;
+  margin: 0px;
   height: inherit;
+  max-width: 1280; /*Invalid property - Chrome dev tools*/
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -71,14 +79,14 @@ header ul{
   text-transform: uppercase;
   justify-content: center;
   align-items: center;
-
+  /*flex-basis: 40%; Goes on li.*/
 }
 
 header img {
   /*border: 2px solid red;*/
   /*width: 100%;*/
   position: absolute;
-  height: 50px;
+  height: 45px;   /*scales down the image*/
   justify-content: flex-start;
   align-items: center;
   margin: 15px;
@@ -89,10 +97,11 @@ header li {
   /*color: #2B2F26;*/
   display: block;
   /*justify-content: center;*/
-  flex-basis: 10%;
-  align-content: center;
-  padding: 15px;
+  flex-basis: 12%;
+  /*align-content: center; */
+  padding: 5px;
   /*text-decoration: none;*/
+  text-align: center;
 }
 
 header a {
@@ -124,13 +133,14 @@ a, a:hover {
 
 /*main content*/
 
+
 #site-main {
   font-family: 'Merriweather', serif;
   background-color: #F2F1E8;
-  display: flex;
-  flex-direction: column;
+  /*display: flex;*/
+  /*flex-direction: column;*/
   /*justify-content: center;*/
-  align-items: center;
+  /*align-items: center;*/
   /*margin: 0;*/
   /*padding: 0;*/
   width:100%;
@@ -150,7 +160,7 @@ a, a:hover {
 
 #site-main h1 {
   /*border: 2px solid red;*/
-  font-size: 75px;
+  font-size: 70px;
   font-weight: 400;
   text-align: center;
   /*text-overflow: clip;*/
@@ -159,7 +169,7 @@ a, a:hover {
 }
 
 #about-main h1 {
-  font-size: 75px;
+  font-size: 70px;
   font-weight: 400;
   text-align: center;
   margin: 40px;
@@ -206,7 +216,7 @@ a, a:hover {
 
 .pictures li {
 
-  max-width: 60%;
+  /*max-width: 60%;*/
   min-width: 200px;
   padding: 0;
   margin: 10px;
@@ -217,7 +227,7 @@ a, a:hover {
   /*overflow: hidden;*/
   display: flex;
   flex-flow: row wrap;
-    /*trying to wrap pics after shrinking to min-width: */
+  /*trying to wrap pics after shrinking to min-width: */
   /*justify-content: flex-end;*/
   /*flex-direction: column;*/
   align-items: flex-end;
@@ -226,11 +236,11 @@ a, a:hover {
 /*"neither of these target properly"*/
 
 #row1 li {
-  height: 400px;
+  height: 350px;
 }
 
  #row2 li {
-  height: 300px;
+  height: 250px;
 }
 
 
@@ -243,8 +253,21 @@ a, a:hover {
   height: 30px;
 }
 
+/*These need to go on each image with different values*/
+.crop {
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.crop img {
+    width: 400px;
+    height: 300px;
+    margin: -75px 0 0 -100px;
+}
+
 #pic1 {
-  flex-grow: 3;
+  flex-grow: 5;
   background-image: url("./images/product-1.jpg")
 }
 
@@ -269,7 +292,7 @@ a, a:hover {
 }
 
 #pic6 {
-  flex-grow: 2;
+  flex-grow: 4;
   background-image: url("./images/product-6.jpg")
 }
 
@@ -294,12 +317,23 @@ span {
 
 }
 
+col {
+
+  float: right;
+  /*trying to make picture and caption appear in a column on the right*/
+}
+
 #shelf-space {
+  width: 200px;
+  height: 150px;
   background-image: url("./images/background-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #birdhouse {
-  height: 200px;
+  height: 150px;
   width: 200px;
   float: left;
 }
@@ -319,4 +353,11 @@ p {
   height: 200px;
   width: inherit;
   background-color: transparent;
+}
+
+table, tr, td {
+  border: 1px solid #046c97;
+  border-collapse: collapse;
+  padding: 10px;
+}
 }
