@@ -97,3 +97,5 @@ In your browser, load the site, navigate to "NEWSLETTER", add a name and an emai
 After first commit: Index.html. I still want to set max-width to get the charcoal background-color to show on the sides. Fine tuning of positions needs to happen after getting max-width set to match layout.png.
 
 A change made to the header caused header width to inherit a value different than header ul.
+
+Page scrolling behind heager works.
