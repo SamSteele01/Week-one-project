@@ -26,6 +26,7 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
+  color: #131511;
   /*background-color: */
 }
 /*body, html {
@@ -118,12 +119,12 @@ header li.selected a {
   color: #968772;
 }
 
-/*header a:hover {*/
-  /*color: #CD5D67;*/
+header a:hover {
+  color: #CD5D67;
 }
 
 a, a:hover {
-  color: #CD5D67;
+  /*color: #CD5D67;*/ /*doesn't work here*/
   -webkit-transition: color .4s linear;
   -moz-transition: color .4s linear;
   -o-transition: color .4s linear;
@@ -176,32 +177,32 @@ a, a:hover {
 }
 
 #home-body #row1 {
-  /*border: 2px solid green;*/ /*Pesticide dev tool*/
   display: flex;
-  /*flex-wrap: wrap;*/
-  /*align-content: space-around;*/
   justify-content: center;
   flex-direction: row;
   width: 100%;
+  padding: 0px;
+  margin: 0 ;
+  flex-wrap: wrap;
+  /*border: 2px solid green;*/ /*Pesticide dev tool*/
+  /*flex-wrap: wrap;*/
+  /*align-content: space-around;*/
   /*height: 400px;*/
   /*max-width: 100%;*/
-  padding: 0px;
-  margin: 0 10px;
   /*display: block;*/
-  flex-wrap: wrap;
 }
 
 #home-body #row2 {
-  /*border: 2px solid green;*/ /*Pesticide dev tool*/
   display: flex;
   flex-wrap: nowrap;
-  /*align-content: space-around;*/
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: row;
   width: 100%;
-  /*height: 300px;*/
-  padding: 0px;
+  padding: 0;
   margin: 0;
+  /*border: 2px solid green;*/ /*Pesticide dev tool*/
+  /*align-content: space-around;*/
+  /*height: 300px;*/
 }
 
 .pictures li {
@@ -232,7 +233,6 @@ a, a:hover {
   height: 250px;
 }
 
-
 .pictures a {
   color: #F2F1E8;
   padding: 10px 14px 4px;
@@ -257,6 +257,7 @@ a, a:hover {
 
 /*replace with flex: grow, shrink, basis*/
 #pic1 {
+  margin-left: 25px;
   flex-grow: 5;
   background-image: url("./images/product-1.jpg")
 }
@@ -267,26 +268,33 @@ a, a:hover {
 }
 
 #pic3 {
+  margin-right: 25px;
   flex-grow: 1;
   background-image: url("./images/product-3.jpg")
 }
 
 #pic4 {
+  margin-left: 25px;
+  margin-bottom: 25px;
   flex-grow: 1;
   background-image: url("./images/product-4.jpg")
 }
 
 #pic5 {
+  margin-bottom: 25px;
   flex-grow: 1;
   background-image: url("./images/product-5.jpg")
 }
 
 #pic6 {
+  margin-bottom: 25px;
   flex-grow: 4;
   background-image: url("./images/product-6.jpg")
 }
 
 #pic7 {
+  margin-bottom: 25px;
+  margin-right: 25px;
   flex-grow: 1;
   background-image: url("./images/product-7.jpg")
 }
@@ -302,19 +310,19 @@ a, a:hover {
   width: inherit;
   height: 40px;
   background-color: #2B2F26;
-  padding: 40px 0;
-  /*vertical-align: middle;*/
-  /*z-index:5;  These don't get used */
-  /*overflow:auto;*/
+  padding: 50px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /*vertical-align: middle;*/
+  /*z-index:5;  These don't get used */
+  /*overflow:auto;*/
 }
 
 span {
   margin: 30px;
-  padding: 50px;
-  font-size: 20px;
+  /*padding: 50px;*/
+  font-size: 21px;
   font-family: 'Merriweather', serif;
 }
 /*Common end-------------*/
@@ -322,17 +330,23 @@ span {
 /*Start of about.html----------*/
 /*Start about-main---*/
 
-#about-main {
+.about-main {
   font-family: 'Merriweather', serif;
   background-color: #F2F1E8;
-  width: 1280px;
-   /*Switching this to px makes the footer move to the right*/
+  width: 100%;
   padding-top:92px;
+  /*padding-left: 80px;*/
+  /*padding-right: 80px;*/
   z-index:5;
   overflow:auto;
 }
 
-#about-main h1 {
+#above-window, #below-window {
+  padding-left: 170px;
+  padding-right: 170px;
+}
+
+.about-main h1 {
   font-size: 70px;
   font-weight: 400;
   text-align: center;
@@ -340,7 +354,63 @@ span {
   padding: 0;
 }
 
-.below-window {
+p a {
+  color: #968772;
+}
+
+#birdhouse {
+  height: 150px;
+  width: 200px;
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+blockquote {
+  border-left: 3px solid #968772;
+  height: 50px;
+  width: 850px;
+  font-size: 21px;
+  font-style: italic;
+  margin: 0;
+  padding: 15px 30px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 2;
+
+}
+
+#window {
+  background-image: url("./images/background-3.jpg");
+  height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: inherit;
+  /*padding-left: -80px;*/
+  /*padding-right: -80px;*/
+}
+
+#window h3 {
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 300px;
+  font-size: 65px;
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+}
+
+.about-main h2 {
+  padding: 0;
+  margin: 30px 0;
+  font-size: 35px;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.below-header {
   display: flex;
   flex-direction: row;
   /*justify-content: flex-end;*/
@@ -348,13 +418,20 @@ span {
 
 }
 
-#facilities {
+div #facilities-table {
   justify-content:  flex-start;
+  margin: 0;
 }
 
-.below-window #col {
+#facilities-table p {
+  margin: 0;
+}
+
+.below-header #col {
   width: 200px;
   justify-content: flex-end;
+  margin: 0;
+  padding: 0;
   /*float: right;*/
   /*trying to make picture and caption appear in a column on the right*/
 }
@@ -368,64 +445,33 @@ span {
   background-repeat: no-repeat;
 }
 
-.below-window col #caption {
+div #caption {
+  margin: 20px 0;
   width: 200px;
-}
-
-#birdhouse {
-  height: 150px;
-  width: 200px;
-  float: left;
-  margin: 0 20px 20px 0;
-}
-
-blockquote {
-  border-left: 2px solid tan;
-  height: auto;
-  font-size: 20px;
-  font-style: italic;
-}
-
-p {
-  font-size: 25px;
-
-}
-
-#window {
-    /* The image used */
-    background-image: url("./images/background-3.jpg");
-
-    /* Full height */
-    height: 300px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  /*height: 200px;*/
-  width: inherit;
-  /*background-color: transparent; what I thought for parallaxing*/
-}
-
-#about-main h2 {
-  padding: 0;
-  margin: 0;
-  font-size: 20px;
+  font-size: 15px;
+  line-height: 1.8;
 }
 
 table {
   width: auto;
-  height: auto;
+  height: 350px;
 }
 table, th, tr, td {
-  border: 1px solid #046c97;
+  border: 1px solid #2B2F26;
   border-collapse: collapse;
   padding: 10px;
   font-size: 20px;
 }
 
-/*Start Newsletter------ */
+table tr:first-child {
+  text-align: center;
+}
+
+table tr:nth-child(2n) {
+  background-color: #F1EADD;
+}
+
+/*Start Newsletter------------- */
 
 body #newsletter-main {
   /*background-color: #F2F1E8;*/
@@ -445,22 +491,55 @@ body #newsletter-main {
 }
 
 .signup-module {
-  width: 500px;
-  height: 350px;
+  width: 520px;
+  height: 300px;
+  padding: 30px;
   background-color: #FFFFFF;
   font-family: 'Merriweather', serif;
+  color: #2B2F26;
   text-align: center;
 }
 
-.signup-module .text-input-boxes {
+.signup-module h3 {
+  font-size: 27px;
+  font-style: normal;
+  font-weight: lighter;
+  margin: 10px 0;
+}
+.signup-module h4 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  margin: 20px 0 35px;
+}
+
+div .text-input-boxes {
   width: inherit;
   border-color: #FFFFFF;
-  border-bottom: #968772;
+  border-bottom: 2px solid #968772;
   color: #967343;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.text-input-boxes input {
+  border-style: none;
+  width: 400px;
+  height: 20px;
+  font-size: 14px;
+  color: #2B2F26;
+}
+
+.text-input-boxes input:focus {
+  outline: none;
 }
 
 .signup-module #signupButton {
   background-color: #968772;
   color: #F2F1E8;
-
+  border-style: none;
+  height: 55px;
+  width: 120px;
+  margin: 20px;
+  font-size: 18px;
 }
