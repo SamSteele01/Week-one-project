@@ -257,45 +257,52 @@ a, a:hover {
 
 /*replace with flex: grow, shrink, basis*/
 #pic1 {
-  margin-left: 25px;
-  flex-grow: 5;
+  margin-left: 15px;
+  /*flex-grow: 5;*/
+  width: 57%;
   background-image: url("./images/product-1.jpg")
 }
 
 #pic2 {
-  flex-grow: 1;
+  /*flex-grow: 1;*/
+  width: 18%;
   background-image: url("./images/product-2.jpg")
 }
 
 #pic3 {
-  margin-right: 25px;
-  flex-grow: 1;
+  margin-right: 15px;
+  /*flex-grow: 1;*/
+  width: 18%;
   background-image: url("./images/product-3.jpg")
 }
 
 #pic4 {
-  margin-left: 25px;
+  margin-left: 15px;
   margin-bottom: 25px;
-  flex-grow: 1;
+  /*flex-grow: 1;*/
+  width: 18%;
   background-image: url("./images/product-4.jpg")
 }
 
 #pic5 {
   margin-bottom: 25px;
-  flex-grow: 1;
+  /*flex-grow: 1;*/
+  width: 18%;
   background-image: url("./images/product-5.jpg")
 }
 
 #pic6 {
   margin-bottom: 25px;
-  flex-grow: 4;
+  /*flex-grow: 4;*/
+  width: 38%;
   background-image: url("./images/product-6.jpg")
 }
 
 #pic7 {
   margin-bottom: 25px;
   margin-right: 25px;
-  flex-grow: 1;
+  /*flex-grow: 1;*/
+  width: 18%;
   background-image: url("./images/product-7.jpg")
 }
 
@@ -480,23 +487,30 @@ table tr:nth-child(2n) {
 /*Start Newsletter------------- */
 
 body #newsletter-main {
-  /*background-color: #F2F1E8;*/
   display: flex;
+  /*flex-direction: column;*/
   justify-content: center;
-  /*align-content: center;*/
   align-items: center;
   width: inherit;
-  height: 500px;
-  /*width:1280px;*/
+  height: 800px;
   padding-top:92px;
   background-image: url("./images/background-2.jpg");
-  /*background-attachment: fixed;*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 100%;
+  overflow: scroll;
+  /*background-attachment: fixed;*/
+  /*width:1280px;*/
+  /*align-content: center;*/
+  /*background-color: #F2F1E8;*/
 }
 
 .signup-module {
+  /*object-position: center;*/
+  position: fixed;
+  top: 25%;
+  z-index: 10;
   width: 520px;
   height: 300px;
   padding: 30px;
