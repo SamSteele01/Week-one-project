@@ -537,7 +537,7 @@ div .text-input-boxes {
   width: inherit;
   border-color: #FFFFFF;
   border-bottom: 2px solid #968772;
-  color: #967343;
+  color: #757575;
   margin: 10px 0;
   text-align: left;
 }
@@ -547,7 +547,7 @@ div .text-input-boxes {
   width: 400px;
   height: 20px;
   font-size: 14px;
-  color: #2B2F26;
+  color: #131511;
 }
 
 .text-input-boxes input:focus {
@@ -563,4 +563,9 @@ div .text-input-boxes {
   width: 120px;
   margin: 20px;
   font-size: 18px;
+}
+
+#signupButton:hover {
+  color: #FFFFFF;
+  background-color: #967343;
 }
