@@ -58,7 +58,6 @@ body {
 #site-header {
   margin: 0;
   height: 75px;
-  /*font-family: 'Roboto', sans-serif;*/
   color: #2B2F26;
   font-weight: 400;
   background-color: #FFFFFF;
@@ -66,6 +65,7 @@ body {
   width: 1280px;
   position:fixed; /*for z-index*/
   z-index:10;
+  /*font-family: 'Roboto', sans-serif;*/
   /*background:inherit;*/
 }
 
@@ -80,10 +80,10 @@ header ul{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  /*text-decoration: none;*/
   text-transform: uppercase;
   justify-content: center;
   align-items: center;
+  /*text-decoration: none;*/
   /*flex-basis: 40%; Goes on li.*/
 }
 
@@ -99,14 +99,14 @@ header img {
 header li {
   width: 50px;
   font-family: 'Roboto', sans-serif;
-  /*color: #2B2F26;*/
   display: block;
-  /*justify-content: center;*/
   flex-basis: 12%;
-  /*align-content: center; */
   padding: 5px;
-  /*text-decoration: none;*/
   text-align: center;
+  /*color: #2B2F26;*/
+  /*justify-content: center;*/
+  /*align-content: center; */
+  /*text-decoration: none;*/
 }
 
 header a {
@@ -141,16 +141,16 @@ a, a:hover {
 #site-main {
   font-family: 'Merriweather', serif;
   background-color: #F2F1E8;
+  width:1280px;
+  padding-top:92px;
+  z-index:5;
+  overflow:auto;
   /*display: flex;*/
   /*flex-direction: column;*/
   /*justify-content: center;*/
   /*align-items: center;*/
   /*margin: 0;*/
   /*padding: 0;*/
-  width:1280px;
-  padding-top:92px;
-  z-index:5;
-  overflow:auto;
 }
 
 
@@ -258,58 +258,58 @@ a, a:hover {
 /*replace with flex: grow, shrink, basis*/
 #pic1 {
   margin-left: 15px;
-  /*flex-grow: 5;*/
   width: 57%;
   background-position: top;
   background-image: url("./images/product-1.jpg")
+  /*flex-grow: 5;*/
 }
 
 #pic2 {
-  /*flex-grow: 1;*/
   width: 18%;
   background-position: top;
   background-image: url("./images/product-2.jpg")
+  /*flex-grow: 1;*/
 }
 
 #pic3 {
   margin-right: 15px;
-  /*flex-grow: 1;*/
   width: 18%;
   background-image: url("./images/product-3.jpg")
+  /*flex-grow: 1;*/
 }
 
 #pic4 {
   margin-left: 15px;
   margin-bottom: 25px;
   background-position: left;
-  /*flex-grow: 1;*/
   width: 18%;
   background-image: url("./images/product-4.jpg")
+  /*flex-grow: 1;*/
 }
 
 #pic5 {
   margin-bottom: 25px;
-  /*flex-grow: 1;*/
   width: 18%;
   background-position: left;
   background-image: url("./images/product-5.jpg")
+  /*flex-grow: 1;*/
 }
 
 #pic6 {
   margin-bottom: 25px;
-  /*flex-grow: 4;*/
   width: 38%;
   background-position: top;
   background-image: url("./images/product-6.jpg")
+  /*flex-grow: 4;*/
 }
 
 #pic7 {
   margin-bottom: 25px;
   margin-right: 25px;
-  /*flex-grow: 1;*/
   width: 18%;
   background-position: left;
   background-image: url("./images/product-7.jpg")
+  /*flex-grow: 1;*/
 }
 
 /*End main content-------*/
@@ -334,9 +334,9 @@ a, a:hover {
 
 span {
   margin: 30px;
-  /*padding: 50px;*/
   font-size: 21px;
   font-family: 'Merriweather', serif;
+  /*padding: 50px;*/
 }
 /*Common end-------------*/
 
@@ -348,10 +348,10 @@ span {
   background-color: #F2F1E8;
   width: 100%;
   padding-top:92px;
-  /*padding-left: 80px;*/
-  /*padding-right: 80px;*/
   z-index:5;
   overflow:auto;
+  /*padding-left: 80px;*/
+  /*padding-right: 80px;*/
 }
 
 #above-window, #below-window {
@@ -372,14 +372,14 @@ p a {
 }
 
 #birdhouse {
-  /*background-image: url("./images/birdhouse.jpg");*/
-  /*position: fixed; */
-  /*clip: rect(100px, 100px, 0, 0);*/
-  /*object-fit: cover;*/
   height: 150px;
   width: 200px;
   float: left;
   margin: 0 20px 20px 0;
+  /*background-image: url("./images/birdhouse.jpg");*/
+  /*position: fixed; */
+  /*clip: rect(100px, 100px, 0, 0);*/
+  /*object-fit: cover;*/
 }
 
 blockquote {
@@ -456,11 +456,11 @@ div #facilities-table {
 #shelf-space {
   width: 170px;
   height: 140px;
-  /*background-image: url("./images/background-1.jpg");*/
   background-size: auto;
   background-position: left;
   background-repeat: no-repeat;
   overflow: hidden;
+  /*background-image: url("./images/background-1.jpg");*/
 }
 
 div #caption {
@@ -494,7 +494,6 @@ table tr:nth-child(2n) {
 
 body #newsletter-main {
   display: flex;
-  /*flex-direction: column;*/
   justify-content: center;
   align-items: center;
   width: inherit;
@@ -506,6 +505,7 @@ body #newsletter-main {
   background-size: cover;
   min-height: 100%;
   overflow: scroll;
+  /*flex-direction: column;*/
   /*background-attachment: fixed;*/
   /*width:1280px;*/
   /*align-content: center;*/
@@ -517,7 +517,7 @@ body #newsletter-main {
   position: fixed;
   top: 25%;
   z-index: 10;
-  width: 520px;
+  width: 550px;
   height: 300px;
   padding: 30px;
   background-color: #FFFFFF;
