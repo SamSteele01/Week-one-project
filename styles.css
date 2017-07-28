@@ -260,12 +260,14 @@ a, a:hover {
   margin-left: 15px;
   /*flex-grow: 5;*/
   width: 57%;
+  background-position: top;
   background-image: url("./images/product-1.jpg")
 }
 
 #pic2 {
   /*flex-grow: 1;*/
   width: 18%;
+  background-position: top;
   background-image: url("./images/product-2.jpg")
 }
 
@@ -279,6 +281,7 @@ a, a:hover {
 #pic4 {
   margin-left: 15px;
   margin-bottom: 25px;
+  background-position: left;
   /*flex-grow: 1;*/
   width: 18%;
   background-image: url("./images/product-4.jpg")
@@ -288,6 +291,7 @@ a, a:hover {
   margin-bottom: 25px;
   /*flex-grow: 1;*/
   width: 18%;
+  background-position: left;
   background-image: url("./images/product-5.jpg")
 }
 
@@ -295,6 +299,7 @@ a, a:hover {
   margin-bottom: 25px;
   /*flex-grow: 4;*/
   width: 38%;
+  background-position: top;
   background-image: url("./images/product-6.jpg")
 }
 
@@ -303,6 +308,7 @@ a, a:hover {
   margin-right: 25px;
   /*flex-grow: 1;*/
   width: 18%;
+  background-position: left;
   background-image: url("./images/product-7.jpg")
 }
 
